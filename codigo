@@ -1,0 +1,95 @@
+
+//ATIVIDADE 1 :
+// export class Livro {
+//     titulo: String;
+//     autor: String;
+//     anoPublicacao: Number
+
+//     constructor(titulo: String, autor: String, anoPublicacao: Number) {
+//         this.titulo = titulo
+//         this.autor = autor
+//         this.anoPublicacao = anoPublicacao
+//     }
+//     obterDetalhes() {
+//      return `Título: ${this.titulo} \nAutor: ${this.autor} \nAno de publicação: ${this.anoPublicacao}`
+//     }
+// }
+//--------------------------------------------------------
+
+//ATIVIDADE 2 :
+// export class Aluno {
+//     nome: String
+//     notas: Array<number> = []
+
+//     constructor(nome: String) {
+//         this.nome = nome
+//         this.notas = []
+//     }
+//     setNotas(n1: number, n2: number, n3: number) {
+//         this.notas.push(n1)
+//         this.notas.push(n2)
+//         this.notas.push(n3)
+//     }
+//     getMedia(): number {
+//         let media = (this.notas[0] + this.notas[1] + this.notas[2]) / 3
+//         return media
+//     }
+    
+// }
+//--------------------------------------------------------
+
+// ATIVIDADE 3 :      RASCUNHO
+// export class Calculadora {
+//     adicao: Array<number> = []
+//     subtracao: Array<number> = []
+//     multiplicacao: Array<number> = []
+//     divisao: Array<number> = []
+
+//     setValores(n1: number, n2: number) {
+//         this.adicao.push(n1)
+//         this.adicao.push(n2)
+
+//         this.subtracao.push(n1)
+//         this.subtracao.push(n2)
+
+//         this.multiplicacao.push(n1)
+//         this.multiplicacao.push(n1)
+
+//         this.divisao.push(n1)
+//         this.divisao.push(n2)
+//     }
+
+//     getAdicao(): number {
+//         let addResultado = this.adicao[0] + this.adicao[1]
+//         return addResultado
+//     }
+//     getSubtracao(): number {
+//         let subResultado = this.subtracao[0] - this.subtracao[1]
+//         return subResultado
+//     }
+//     getMultiplicacao(): number {
+//         let multiResultado = this.multiplicacao[0] * this.multiplicacao[1]
+//         return multiResultado
+//     }
+//     getDivisao(): number {
+//         let divResultado = this.divisao[0] / this.divisao[1]
+//         return divResultado
+//     }
+// }
+//--------------
+
+import * as leitor from "readline-sync"
+export class Calculadora {
+    n1: number;
+    n2: number;
+
+    setValores() {
+        this.n1 = leitor.questionFloat("Insira o primerio numero: ")
+        this.n2 = leitor.questionFloat("Insira o segundo numero: ")
+    }
+
+    getAdicao():         number     {return this.n1 + this.n2}
+    getSubtracao():      number     {return this.n1 - this.n2}
+    getMultiplicacao():  number     {return this.n1 * this.n2}
+    getDivisao():        number     {return this.n1 / this.n2}
+}
