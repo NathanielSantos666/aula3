@@ -1,0 +1,85 @@
+
+//INDEX 1 :
+// import { Livro } from "./aula";
+// import * as leitor from "readline-sync"
+
+// function main() {
+//     let livro = cadastro()
+//     console.log(livro.obterDetalhes());
+// }
+
+// function cadastro() {
+//     let titulo = leitor.question("Insira o nome do livro: ")
+//     let autor = leitor.question("Insira o nome de seu autor: ")
+//     let anoPublicacao = leitor.questionInt("Insira o ano de sua publicação: ")
+//     let livro = new Livro(titulo, autor, anoPublicacao)
+//     return livro
+// }
+
+// main();
+//--------------------------------------------------------
+
+//INDEX 2 :
+// import { Aluno } from "./aula";
+// import * as leitor from "readline-sync"
+
+// function main(): void {
+//     let aluno = cadastro()
+//     console.log("Nome do aluno: ", aluno.nome, "Nota final: ", aluno.getMedia())
+// }
+
+// function cadastro(): Aluno {
+//     let nome = leitor.question("Insira o nome do aluno: ")
+//     let aluno = new Aluno(nome)
+
+//     let n1 = leitor.questionInt("Insira a nota do orimeiro trimestre: ")
+//     let n2 = leitor.questionInt("Insira a nota do segundo trimestre: ")
+//     let n3 = leitor.questionInt("Insira a nota do terceiro trimestre: ")
+//     aluno.setNotas(n1, n2, n3)
+//     return aluno
+// }
+
+// main();
+//--------------------------------------------------------
+
+//INDEX 3 :         RASCUNHO
+// import { Calculadora } from "./aula";
+// import * as leitor from "readline-sync"
+
+// function main(): void {
+//     console.log("1. Adição. \n2. Subtração. \n3. Multiplicação. \n4. Divisão.")
+//     let calculadora = menu()
+// }
+
+// function menu(): Calculadora {
+//     let opcao = leitor.questionInt("Insira o numero correspondente á equação que deseja realizar")
+//     let calculadora = new Calculadora(adicao, subtracao, multiplicacao, divisao)
+//     if (opcao === 1) {
+//         Calculadora.getAdicao()
+//     } else if (opcao === 2) {
+//         Calculadora.getSubtracao()
+//     } else if (opcao === 3) {
+//         Calculadora.getMultiplicacao()
+//     } else if (opcao === 4) {
+//         Calculadora.getDivisao()
+//     } else {
+//         console.log("Essa opção não existe.")
+//     }
+//     return calculadora
+// }
+
+//--------------
+
+import { Calculadora } from "./aula";
+
+function main() {
+    let calc = new Calculadora()
+    calc.setValores()
+
+    console.log("resultado da soma: ", calc.getAdicao())
+    console.log("resultado da subtração: ", calc.getSubtracao())
+    console.log("resultado da multiplicação: ", calc.getMultiplicacao())
+    console.log("resultado da divisão: ", calc.getDivisao())
+}
+
+main();
